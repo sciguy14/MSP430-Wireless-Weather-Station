@@ -1,0 +1,1 @@
+"./mrfi_spi.obj" "./mrfi_radio.obj" "./mrfi_f1f2.obj" "./mrfi_board.obj" "./mrfi.obj" "./bsp_leds.obj" "./bsp_drivers.obj" "./bsp_buttons.obj" "./bsp_board.obj" "./bsp.obj" -l"rts430.lib" "../lnk_msp430f2274.cmd" 

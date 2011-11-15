@@ -1,0 +1,16 @@
+Wireless Weather Station
+The project was Developed by Jeremy E. Blum <www.jeremyblum.com> & Matt Newberg
+More info is available at http://jeremyblum.com/2011/05/14/msp430-wireless-weather-station/
+
+This is Open Source Hardware and Software Licensed via a Creative Commons Attribution Share-Alike License
+http://creativecommons.org/licenses/by-nc-sa/3.0/us/
+
+Transceiver - This is the code that is loaded onto the MSP430 that is plugged into the computer via USB.  It receives data and sends it into the computer via UART/serial.
+
+Station - This is the code that is loaded onto the remote Weather Station MSP430.  It gathers data via ADC, formats, and sends it wirelessly to the MSP430 that is connected to the computer
+
+The above folders contain all the driver files in the root.  ”receive_data.c” and “send_data.c” contain the main functionality.  The code is intended to be compiled in Code Composer studio.  To be sure it compiles, right-click on the project and go to “build properties”.  On the “Tools Settings” page under “MSP430 Compiler > Include Options”, change “CCE_INSTALL_ROOT” to “CCS_INSTALL_ROOT”.  Under “MSP430 Linker > File Search Path” change “CCE_INSTALL_ROOT” to “CCS_INSTALL_ROOT”.  On the “Build Settings” page uncheck “Use Default Command” and change “CCE_INSTALL_ROOT” to “CCS_INSTALL_ROOT”.
+
+display_temp - This is the processing code that was used to write the graphical interface for displaying the data.  Processing can be downloaded at http://www.processing.org.  It does not require an installation.  The COM port in that code is set to COM7, but can be easily changed depending on what COM port your MSP430 is connected to.
+
+Schematic - This folder contains the eagleCAD schematic, as well as a PNG of the Weather Station Schematic.
